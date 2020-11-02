@@ -1,5 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import "./index.css";
+import propsFactory from "./props";
 import {
   FONT_BARON_SANS,
   FONT_MEDIUM,
@@ -41,6 +42,8 @@ const theme = createMuiTheme({
       default: "#fff"
     }
   },
+  props: propsFactory(defaultTheme),
+  breakpoints: defaultTheme.breakpoints,
   overrides: {
     MuiAppBar: {
       root: {
