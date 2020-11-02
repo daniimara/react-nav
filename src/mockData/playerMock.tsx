@@ -1,3 +1,4 @@
+import { Player } from "../types";
 // A simple data API that will be used to get the data for our
 // components. On a real website, a more robust data fetching
 // solution would be more appropriate.
@@ -13,8 +14,8 @@ const PlayerAPI = {
   all: function () {
     return this.players;
   },
-  get: function (id) {
-    const isPlayer = (p) => p.number === id;
+  get: function (id: number) {
+    const isPlayer = (p: Player) => p.number === id;
     return this.players.find(isPlayer);
   }
 };

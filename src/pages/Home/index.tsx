@@ -1,5 +1,4 @@
 import React, { CSSProperties, FC } from "react";
-import { Button } from "@material-ui/core";
 
 export interface AppProps {
   rootStyle?: CSSProperties;
@@ -7,12 +6,16 @@ export interface AppProps {
 
 export const Home: FC<AppProps> = ({ children, rootStyle }) => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <Button color="primary">Hello World</Button>
+    <div style={{ ...rootStyle }}>
+      <h1>Home</h1>
     </div>
   );
+};
+
+Home.defaultProps = {
+  rootStyle: {
+    marginTop: 0
+  }
 };
 
 export default Home;

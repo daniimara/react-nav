@@ -9,7 +9,7 @@ const FullRoster = () => (
     <ul>
       {PlayerAPI.all().map((p) => (
         <li key={p.number}>
-          <Link to={`/roster/${p.number}`}>{p.name}</Link>
+          <Link to={`/roster/detail?id=${p.number}`}>{p.name}</Link>
         </li>
       ))}
     </ul>
