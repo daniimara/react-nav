@@ -1,10 +1,7 @@
-import React, { FC } from "react";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import React from "react";
+import { Typography, Link } from "@material-ui/core";
 
-interface CopyrightProps {}
-
-export const Copyright: FC<CopyrightProps> = () => {
+export const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}

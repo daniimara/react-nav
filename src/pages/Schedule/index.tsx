@@ -1,13 +1,14 @@
 import React from "react";
+import { Container } from "@material-ui/core";
 
 const Schedule = () => (
-  <div>
+  <Container>
     <ul>
       <li>6/5 @ Evergreens</li>
       <li>6/8 vs Kickers</li>
       <li>6/14 @ United</li>
     </ul>
-  </div>
+  </Container>
 );
 
 export default Schedule;

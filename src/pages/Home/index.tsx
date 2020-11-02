@@ -1,3 +1,4 @@
+import { Container, Typography } from "@material-ui/core";
 import React, { CSSProperties, FC } from "react";
 
 export interface AppProps {
@@ -6,9 +7,12 @@ export interface AppProps {
 
 export const Home: FC<AppProps> = ({ children, rootStyle }) => {
   return (
-    <div style={{ ...rootStyle }}>
-      <h1>Home</h1>
-    </div>
+    <Container style={{ ...rootStyle }}>
+      <Typography variant="h1" component="h1">
+        Home
+      </Typography>
+      {children}
+    </Container>
   );
 };
 

@@ -1,22 +1,21 @@
 import React from "react";
-import { makeStyles, createStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import {
+  Theme,
+  makeStyles,
+  createStyles,
+  Container,
+  Grid
+} from "@material-ui/core";
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    header: {
-      backgroundColor: "#F3F3F3"
+    root: {
+      backgroundColor: theme.palette.grey[300]
     },
     nav: {
       width: "100%",
-      "& ul": {
-        display: "flex",
-        flexDirection: "row",
-        listStyleType: "none",
-        "& li": {
-          padding: 10
-        }
-      }
+      padding: "20px 0px"
     }
   })
 );
@@ -27,30 +26,23 @@ export const Header = () => {
   const classes = useStyles();
 
   return (
-    <header className={classes.header}>
-      <nav className={classes.nav}>
-        {/* <Link color="inherit" href="/">
-          <Typography variant="caption">Home</Typography>
-        </Link>
-        <Link color="inherit" href="/roster">
-          <Typography variant="caption">Roster</Typography>
-        </Link>
-        <Link color="inherit" href="/schedule">
-          <Typography variant="caption">Schedule</Typography>
-        </Link> */}
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/roster">Roster</Link>
-          </li>
-          <li>
-            <Link to="/schedule">Schedule</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Container className={classes.root}>
+      <header>
+        <nav className={classes.nav}>
+          <Grid container direction="row" spacing={3}>
+            <Grid item>
+              <Link to="/">Home</Link>
+            </Grid>
+            <Grid item>
+              <Link to="/roster">Roster</Link>
+            </Grid>
+            <Grid item>
+              <Link to="/schedule">Schedule</Link>
+            </Grid>
+          </Grid>
+        </nav>
+      </header>
+    </Container>
   );
 };
 
