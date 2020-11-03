@@ -1,5 +1,5 @@
 {
-  "name": "brexinterview",
+  "name": "react",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -12,7 +12,7 @@
     "react": "17.0.0",
     "react-dom": "17.0.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.4.0"
   },
   "devDependencies": {
     "@types/react": "16.9.19",
